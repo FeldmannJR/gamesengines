@@ -11,7 +11,6 @@ loadFromFile($page);
 
 
 
-
 function loadFromFile($page ){
     include './pages/'.$page.'.php';
 }

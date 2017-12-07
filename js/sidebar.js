@@ -1,3 +1,34 @@
+$(document).ready(function () {
+   loadOptions();
+
+});
+var options =[
+    {
+        nome:"Inicial",
+        id:"inicial",
+        redir:true,
+    },
+    {
+        nome:"Abertas",
+        id:"abertas",
+        subs:[
+            {
+                nome:"Unity",
+                id:"unity",
+                redir:true
+            },
+            {
+                nome:"Unreal Engine",
+                id:"unreal",
+                redir:true,
+            }
+        ]
+
+    }
+
+];
+
+
 function openNav() {
     document.getElementById("menu").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -7,4 +38,49 @@ function openNav() {
 function closeNav() {
     document.getElementById("menu").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
+}
+
+function clickMenu(id){
+    $(".active").removeClass("active");
+    $("#id-"+id).addClass("active");
+    window.location.hash = id;
+    reloadPage();
+
+}
+
+function append(campo,html){
+
+   html+= "<li>";
+    if(campo.subs != undefined){
+
+        html+='<span>'+campo.nome+'</span>';
+        html+="<ul>";
+        campo.subs.forEach(function (t, number) {
+           html= append(t,html);
+        });
+
+        html+="</ul>";
+    }else{
+        console.log(campo.id);
+        html+='<span id =\'id-'+campo.id+'\' onClick=\"clickMenu(\''+campo.id+'\')\">'+campo.nome+'</span>';
+    }
+
+    html+="</li>";
+
+    return html;
+}
+
+function loadOptions(){
+
+
+    var html = "";
+    options.forEach(function (t, number) {
+        html = append(t,html);
+
+    });
+    $("#options").html(html);
+
+
+
+
 }

@@ -10,18 +10,15 @@
     <script src ="./js/pageloader.js?<?php echo rand(0,5000);?>"></script>
 
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel ="stylesheet" href ="./css/bootstrap.css">
+    <!-- <link rel ="stylesheet" href ="./css/bootstrap.css"> -->
     <link rel ="stylesheet" href ="./css/style.css?<?php echo rand(0,5000);?>">
 
 </head>
 <body>
 <div id = "menu" class ="sidenav">
     <h1 class ='titulo'>Game Engines</h1>
-    <ul>
-        <li><a href="#">Inicial</a></li>
-        <li><a onClick="reloadPage()" class ='active' href="#unity">Unity</a></li>
-        <li><a href="#">Privadas</a></li>
-        <li><a href="#">Fazendo a sua</a></li>
+    <ul id ="options">
+
 
     </ul>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

@@ -49,6 +49,7 @@ ul{
     margin: 0;
     padding: 0;
 }
+
 li{
     display: block;
     color: #000;
@@ -56,28 +57,40 @@ li{
     border-bottom:1px solid #555;
 
 }
+li li{
+    border-bottom:1px dotted #555555;
+    border-bottom-right-radius: 5%;
+}
 li:last-child{
     border-bottom:none;
 }
 
-li a {
-    padding: 8px 8px 8px 32px;
+li span{
+    padding: 8px 8px 8px 28px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
     width:250px;
 }
-li a.active{
+li li span{
+    padding: 8px 8px 8px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    width:250px;
+}
+.active{
     color:#5cb85c;
 
 }
-/*
-.sidenav a:hover {
-    color: #f1f1f1;
+li span.active:hover{
+    background-color: #5cb85c;
+    color: white;
 }
-*/
-li a:hover {
+
+li span:hover:not(.active) {
     background-color: #555;
     color: white;
 }
