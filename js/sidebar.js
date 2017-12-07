@@ -45,6 +45,21 @@ function clickMenu(id){
     $("#id-"+id).addClass("active");
     window.location.hash = id;
     reloadPage();
+}
+
+function clickSubMenu(id){
+
+
+    var s= "#subul-"+id+"";
+    var e= $(s);
+    var display = e.is(":visible");
+    console.log("oi "+ display+" "+e.html());
+    if(display){
+        e.hide("slide");
+    }else{
+        e.show("slide");
+
+    }
 
 }
 
@@ -53,8 +68,8 @@ function append(campo,html){
    html+= "<li>";
     if(campo.subs != undefined){
 
-        html+='<span>'+campo.nome+'</span>';
-        html+="<ul>";
+        html+='<span id=\"sub-'+campo.id+'\" onClick=\"clickSubMenu(\''+campo.id+'\')\">'+campo.nome+'</span>';
+        html+="<ul id=\"subul-"+campo.id+"\" >";
         campo.subs.forEach(function (t, number) {
            html= append(t,html);
         });
