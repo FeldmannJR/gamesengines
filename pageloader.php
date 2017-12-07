@@ -12,7 +12,12 @@ loadFromFile($page);
 
 
 function loadFromFile($page ){
-    include './pages/'.$page.'.php';
+    if(file_exists("./pages/".$page.".php")) {
+        include './pages/' . $page . '.php';
+    }else{
+        include './pages/error.php';
+
+    }
 }
 
 

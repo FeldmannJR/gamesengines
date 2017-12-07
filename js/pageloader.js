@@ -16,7 +16,7 @@ $(document).ready(function(){
 function loadPage(page){
 
     loaded = page;
-    $("#main").html('<img style="margin:auto;display:block;margin-top:100px;" src="./img/loader.gif">');
+    $("#conteudo").html('<img style="margin:auto;display:block;margin-top:100px;" src="./img/loader.gif">');
     $.ajax({
         type: "POST",
         url: "./pageloader.php",
@@ -26,7 +26,7 @@ function loadPage(page){
 
             if(parseInt(msg)!=0)
             {
-                $('#main').html(msg);
+                $('#conteudo').html(msg);
 
             }
         }

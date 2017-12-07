@@ -2,6 +2,7 @@ $(document).ready(function () {
    loadOptions();
 
 });
+
 var options =[
     {
         nome:"Inicial",
@@ -21,10 +22,21 @@ var options =[
                 nome:"Unreal Engine",
                 id:"unreal",
                 redir:true,
+            },
+            {
+                nome:"Cryengine",
+                id:"Cryengine",
+                redir:true,
             }
         ]
 
-    }
+
+    },
+    {
+        nome:"Criação",
+        id:"criando",
+        redir:true,
+    },
 
 ];
 
@@ -36,6 +48,7 @@ function openNav() {
 
 
 function closeNav() {
+    $(".sidenav").css("transition","0.5s");
     document.getElementById("menu").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 }
@@ -53,7 +66,6 @@ function clickSubMenu(id){
     var s= "#subul-"+id+"";
     var e= $(s);
     var display = e.is(":visible");
-    console.log("oi "+ display+" "+e.html());
     if(display){
         e.hide("slide");
     }else{
