@@ -1,35 +1,95 @@
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 13%; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    overflow: auto;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    color: #818181;
-    padding-top: 20px;
+@font-face {
+    font-family: 'Runescape';
+    src: url('../fonts/runescape-chat-07-webfont.woff2') format('woff2'),
+    url('../fonts/runescape-chat-07-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
+@font-face {
+    font-family: 'RunescapeBold';
+    src: url('../fonts/runescape-chat-bold-07-webfont.woff2') format('woff2'),
+    url('../fonts/runescape-chat-bold-07-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+    font-family: RunescapeBold;
+    color:white;
+    text-shadow: 1px 1px black;
+    line-height: normal;
+    background-color: #454642;
+}
+
+.sidenav {
+    height: 100%;
+    width: 270px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: auto;
+/*    background-image: url("../img/fundo.png");
+    background-repeat:repeat-y;*/
+    background-image:
+            url(../img/header.png)
+            ;
+    background-repeat:
+            no-repeat;
+
+    background-position:
+            0px 0px;
+
+    background-size: auto, 265px 60px;
+
+
+    overflow-x: hidden;
+    color: #818181;
+
+}
+#pilar{
+    height:100%;
+    width:270px;
+    margin-top:35px;
+    position:fixed;
+    background:
+            url(../img/cabeca.png) -3px 0px no-repeat,
+            url(../img/cabeca.png)  100% 0px no-repeat,
+            url(../img/pe.png) -3px -webkit-calc(100% - 35px) no-repeat,
+            url(../img/pe.png)  100% -webkit-calc(100% - 35px) no-repeat,
+            url(../img/pilare.png) 0px 38px repeat-y,
+            url(../img/pilard.png) 100% 0px repeat-y,
+    url(../img/fundo.png) 0px 0px repeat-y;
+
+    background-size: auto,auto,auto,auto,auto,auto,265px 60px;
+
+
+}
+
+#menuconteudo{
+    margin-top:20px;
+}
+
+.botao{
+
+}
 
 #main{
-    margin-left: 250px;
+    margin-left: 270px;
     padding:20px;
 }
 
-.titulo{
-    padding-left: 20px;
-    color: #f6ffe6;
-}
+
 #source{
 
     display:flex;
     margin:auto;
     width:100%;
     position: absolute;
-    bottom:30px;
+    bottom:50px;
 }
 #source>*{
     display:block;
@@ -40,20 +100,7 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
-.sidenav .closebtn {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    width:30px;
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
 
-}
 ul{
     list-style-type: none;
     margin: 0;
@@ -64,58 +111,73 @@ li{
     display: block;
     color: #000;
     text-decoration: none;
-    border-bottom:1px solid #555;
+  /*  border-bottom:1px solid #555;*/
 
 }
 li li{
-    border-bottom:1px dotted #555555;
-    border-bottom-right-radius: 5%;
+ /*   border-bottom:1px dotted #555555;*/
+
 }
 li:last-child{
     border-bottom:none;
 }
+li li:first-child{
+   /* border-top:1px dotted #555555;*/
+}
 
 .menu.active{
-    color:#5cb85c;
+    color:#00ff00;
 }
 .icone{
     margin-left: 10px;
     font-size: 18px;
     display:inline;
 }
-.icone.fecha{
-    color:#5cb85c;
+.icone{
 
-}
-.icone.abre{
-    color:#5cb85c;
+    height:20px;
+    margin-bottom:15px;
 }
 
+.titulo{
+
+
+    color: #fffa00;
+    font-size: 40px;
+    /*   border-bottom: 1px solid #555;*/
+    padding-bottom: 30px;
+    margin-left:30px;
+}
+#options{
+    margin-left:10px;
+}
 
 li span.menu{
-    padding: 8px 8px 8px 28px;
+    padding: 8px 8px 8px 35px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 30px;
+    color: #d6d6d6;
     display: block;
     width:250px;
 }
 
 li li span.menu{
-    padding: 8px 8px 8px 40px;
+    padding: 4px 4px 4px 45px;
     text-decoration: none;
-    font-size: 16px;
-    color: #818181;
+    font-size: 20px;
+    color: #d6d6d6;
     display: block;
     width:250px;
 }
 
 li span.active.menu:hover{
-    background-color: #5cb85c;
-    color: white;
+  /*  background-color: #5cb85c;*/
+    color: #ff0000;
+
 }
 
 li span.menu:hover:not(.active) {
-    background-color: #555;
-    color: white;
+  /*  background-color: #555;*/
+    color: #ff0000;
+
 }

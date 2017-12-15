@@ -13,25 +13,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- <link rel ="stylesheet" href ="./css/bootstrap.css"> -->
+
+
     <link rel ="stylesheet" href ="./css/style.css?<?php echo rand(0,5000);?>">
 
 </head>
 <body>
 <div id = "menu" class ="sidenav">
-    <h1 class ='titulo'>Game Engines</h1>
-    <ul id ="options">
+    <div id="pilar">
+
+        <div id="menuconteudo">
+
+        <div class ='titulo'>
+            <span class=>Game <br>Engines</span>
+        </div>
+        <ul id ="options">
 
 
-    </ul>
-    <div id="source">
-        <a href="https://github.com/FeldmannJR/gamesengines/">
-            <img src="./img/github.png?asdas">
-        </a>
+        </ul>
+        <div id="source">
+            <a href="https://github.com/FeldmannJR/gamesengines/">
+                <img src="./img/github.png?asdas">
+            </a>
+        </div>
+
     </div>
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+
 
 </div>
-<span onclick="openNav()">open</span>
+
 
 <div id ="main">
     <div id ="conteudo">

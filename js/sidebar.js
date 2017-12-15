@@ -1,5 +1,4 @@
 
-var tamanho ="13%";
 
 $(document).ready(function () {
    loadOptions();
@@ -45,25 +44,32 @@ var options =[
     },
 
 ];
+
 function append(campo,html){
+    append(campo,html,false);
+}
+function append(campo,html,issub){
 
     html+= "<li>";
     if(campo.subs != undefined){
 
         html+='<span class=\"menu\" id=\"sub-'+campo.id+'\" onClick=\"clickSubMenu(\''+campo.id+'\')\">'+campo.nome+
-            '<span class =\"'+close+'\">' +
+            '<span><img class ="icone" src =\"./img/plus.png\">' +
             '</span>' +
             '</span>';
 
         html+="<ul style=\"display:none;\" id=\"subul-"+campo.id+"\" >";
         campo.subs.forEach(function (t, number) {
-            html= append(t,html);
+            html= append(t,html,true);
         });
 
         html+="</ul>";
     }else{
-        console.log(campo.id);
-        html+='<span id =\'id-'+campo.id+'\' class=\"menu\" onClick=\"clickMenu(\''+campo.id+'\')\">'+campo.nome+'</span>';
+        var nome = campo.nome;
+        if(issub){
+            nome = "* "+nome;
+        }
+        html+='<span id =\'id-'+campo.id+'\' class=\"menu\" onClick=\"clickMenu(\''+campo.id+'\')\">'+nome+'</span>';
     }
 
     html+="</li>";
@@ -84,17 +90,6 @@ function loadOptions(){
 }
 
 
-function openNav() {
-    document.getElementById("menu").style.width = tamanho;
-    document.getElementById("main").style.marginLeft = tamanho;
-}
-
-
-function closeNav() {
-    $(".sidenav").css("transition","0.5s");
-    document.getElementById("menu").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-}
 
 function loadedPage(id){
     setActive(id);
@@ -135,13 +130,11 @@ function setMenuOpen(id,isopen){
     var spanicon = $("#sub-"+id).children("span");
     if(!isopen){
         e.hide("slide",function () {
-            spanicon.removeClass(open);
-            spanicon.addClass(close);
+            spanicon.html('<img class ="icone" src =\"./img/plus.png\">');
         });
     }else{
         e.show("slide",function () {
-            spanicon.removeClass(close);
-            spanicon.addClass(open);
+            spanicon.html('<img class =\"icone\" src =\"./img/minus.png\">');
         });
     }
 }
