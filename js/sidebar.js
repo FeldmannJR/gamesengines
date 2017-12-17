@@ -44,7 +44,26 @@ var options =[
     },
 
 ];
+function getPageName(hash){
+    var retorno = "Pagina não encontrada";
+    options.forEach(function (t) {
+        if(t.subs!=undefined){
+            t.subs.forEach(function (t2) {
+                if(t2.id===hash){
+                  retorno =t2.nome;
+                }
+            })
+        }else{
 
+            if(t.id===hash){
+                retorno= t.nome;
+            }
+        }
+
+    });
+    return retorno;
+
+}
 function append(campo,html){
     append(campo,html,false);
 }
@@ -93,7 +112,6 @@ function loadOptions(){
 
 function loadedPage(id){
     setActive(id);
-    console.log("Era pra ter loaded "+id);
 }
 
 function clickMenu(id){
