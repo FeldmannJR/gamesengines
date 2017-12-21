@@ -22,7 +22,7 @@
 
         <div id="menuconteudo">
 
-        <div class ='titulo glow1'>
+        <div class ='titulo'>
             <span class=>Game <br>Engines</span>
         </div>
         <ul id ="options">

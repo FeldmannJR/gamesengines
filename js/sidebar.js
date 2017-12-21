@@ -15,8 +15,8 @@ var options =[
         redir:true,
     },
     {
-        nome:"Abertas",
-        id:"abertas",
+        nome:"Game Engines",
+        id:"list",
         subs:[
             {
                 nome:"Unity",
@@ -29,19 +29,19 @@ var options =[
                 redir:true,
             },
             {
-                nome:"Cryengine",
-                id:"Cryengine",
+                nome:"GameMaker: Studio",
+                id:"gamemaker",
                 redir:true,
-            }
+            },
+            {
+                nome:"Outras",
+                id:"outros",
+                redir:true
+            },
         ]
 
 
-    },
-    {
-        nome:"Criação",
-        id:"criando",
-        redir:true,
-    },
+    }
 
 ];
 function getPageName(hash){

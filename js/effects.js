@@ -13,12 +13,6 @@ var effects = [
         colors:["#FFFFFF","#FF0000"],
         index: 0,
         tempo:250
-    },
-    {
-        nome:"glow3",
-        colors:["#00FF00","#FF0000","#0000FF"],
-        index: 0,
-        tempo:1000
     }
 
 ];

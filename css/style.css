@@ -15,16 +15,24 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'Millennium';
+    src: url('../fonts/millennium-regular_0-webfont.woff2') format('woff2'),
+    url('../fonts/millennium-regular_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 body{
-    font-family: RunescapeBold;
-    color:black;
-    text-shadow: 1px 1px black;
-    line-height: normal;
     background-image:url(../img/fundobody.png);
 }
 
 .sidenav {
+    color:white;
+    font-family: RunescapeBold;
+    text-shadow: 1px 1px black;
+    line-height: normal;
     height: 100%;
     width: 270px;
     position: fixed;
@@ -69,30 +77,6 @@ body{
 #menuconteudo{
     margin-top:20px;
 }
-#main{
-    font-family: Runescape;
-    min-height:500px;
-    margin-left: calc(270px + 3%);
-    margin-right: 3%;
-    margin-top:35px;
-    margin-bottom:3%;
-    padding:20px;
-    background-image: url(../img/bgconteudo.jpg);
-    background-repeat: repeat;
-    border-image-source:url(../img/border.png);
-    border-image-repeat:repeat;
-    border-image-slice:9;
-    border-image-width: 15px;
-    border-style:solid;
-}
-#main>h1{
-    font-size:30px;
-    border-bottom:1px solid black
-}
-#main>p{
-    font-size: 20px;
-
-}
 #source{
     display:flex;
     margin:auto;
@@ -104,7 +88,6 @@ body{
 
 #source>*{
     display:block;
-
     margin:auto;
 }
 @media screen and (max-height: 450px) {
@@ -116,13 +99,6 @@ ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-li{
-    display: block;
-    color: #000;
-    text-decoration: none;
-
 }
 
 .menu.active{
@@ -148,6 +124,8 @@ li{
 }
 
 li span.menu{
+
+
     padding: 8px 8px 8px 35px;
     text-decoration: none;
     font-size: 30px;
@@ -157,6 +135,9 @@ li span.menu{
 }
 
 li li span.menu{
+
+
+
     padding: 4px 4px 4px 45px;
     text-decoration: none;
     font-size: 20px;
@@ -174,3 +155,158 @@ li span.menu:hover:not(.active) {
     color: #ff0000;
 
 }
+
+#main{
+    font-family: initial;
+    min-height:500px;
+    margin-left: calc(270px + 3%);
+    margin-right: 3%;
+    margin-top:35px;
+    margin-bottom:3%;
+    padding:20px;
+    color:white;
+    background-image: url(../img/conteudobg.png);
+    background-repeat: repeat;
+    border-image-source:url(../img/border.png);
+    border-image-repeat:repeat;
+    border-image-slice:9;
+    border-image-width: 15px;
+    border-style:solid;
+}
+
+
+
+#conteudo>*{
+
+    font-color:white;
+    text-shadow: 1px 1px black;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.15;
+
+
+}
+#conteudo>h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+#conteudo>h1{
+    font-size:60px;
+    margin-bottom:0px;
+    margin-top:0px;
+    font-weight: 500;
+}
+
+#conteudo>p{
+    font-size: 18px;
+    font-weight: 300;
+    text-indent: 30px;
+
+}
+
+
+ul.tags{
+    margin-bottom: 5px;
+    margin-left:5px;
+    padding-left:0px;
+}
+ul.tags>li{
+    display: inline-block;
+    color: white;
+    border-radius: 10px;
+    background: gray;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+ul.tags>li:nth-child(odd){
+    background-color:#840b0b;
+}
+
+ul.tags>li:nth-child(even){
+    background-color:#ab5110;
+}
+
+
+.doisd{
+    background-color:#409837 !important;
+}
+.doisd:after{
+    content:"2D";
+}
+.tresd{
+    background-color:#006b13 !important;
+}
+.tresd:after{
+    content:"3D";
+}
+div.jogos{
+    display:block;
+    position: relative;
+}
+div.border{
+    border: 3px solid gray;
+    display:inline-block;
+    margin-bottom:5px;
+    margin-right:5px;
+    width: 324px;
+    height: 151px;
+    border-radius: 3px;
+
+
+}
+div.jogos>div>div:not(.border){
+    background-color:gray;
+    display:inline-block;
+
+    margin:0;
+    background-size: 324px 151px;
+    width:324px;
+    height: 151px;
+}
+
+.overlay{
+    width: 324px;
+    height: 151px;
+    position: absolute;
+
+    background-color: #353434e8;
+    transition: .5s ease;
+    opacity: 0;
+    text-align:center;
+    cursor: pointer;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+.overlay h3{
+    margin-bottom:0px;
+}
+.overlay p{
+    margin-top:4px;
+}
+#linksuteis{
+    margin-left:30px;
+    list-style-type: disc;
+}
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: inherit;
+}
+div .linha{
+    border-bottom:2px ridge #5f5f5f;
+    width:70%;
+}
+.videoname{
+    font-size:24px;
+    text-align:center;
+}
+.video{
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
